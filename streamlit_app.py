@@ -4,6 +4,7 @@ import streamlit as st
 
 # Set page config
 st.set_page_config(page_title="Movies Dataset", page_icon="🎬", layout="wide")
+
 st.title("🎬 FILMOGRAPHY DATASET")
 st.write(
     """
