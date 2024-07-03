@@ -109,7 +109,7 @@ st.markdown("""
         padding: 2rem;
     }
     .stButton>button {
-        background-color: #4CAF50;
+        background-color: darkturquoise;
         color: white;
         font-size: 1rem;
         padding: 0.5rem 1rem;
@@ -118,7 +118,7 @@ st.markdown("""
         cursor: pointer;
     }
     .stButton>button:hover {
-        background-color: #45a049;
+        background-color: darkturquoise;
     }
     .stTextInput>div>div>input {
         font-size: 1rem;
