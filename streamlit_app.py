@@ -105,7 +105,7 @@ st.markdown("""
         background-color: #f0f2f6;
         color: #333;
         font-family: 'Roboto', sans-serif;
-        background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
+       
     }
     .block-container {
         padding: 2rem;
