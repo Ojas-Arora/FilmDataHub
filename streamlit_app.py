@@ -148,7 +148,7 @@ st.markdown("""
         border-radius: 0.25rem;
     }
     h1, h2, h3, h4, h5, h6, p, label, div, span {
-        color: darkturquoise !important;
+        color: black ;
     }
     </style>
     """, unsafe_allow_html=True)
