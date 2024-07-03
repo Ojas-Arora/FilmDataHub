@@ -7,9 +7,9 @@ st.set_page_config(page_title="Movies dataset", page_icon="🎬")
 st.title("🎬 Filmography Dataset")
 st.write(
     """
-    This app visualizes data from [The Movie Database (TMDB)](https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata).
-    It shows which movie genre performed best at the box office over the years. Just 
-    click on the widgets below to explore!
+   Welcome to our interactive visualization app featuring data from [The Movie Database (TMDB)](https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata)[The Movie Database (TMDB)](https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata). 
+   Dive into the world of cinema and discover which movie genres have dominated the box office over the years. 
+   Use the widgets below to start your exploration!
     """
 )
 
