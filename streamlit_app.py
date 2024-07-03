@@ -4,7 +4,7 @@ import streamlit as st
 
 # Set page config
 st.set_page_config(page_title="Movies Dataset", page_icon="🎬", layout="wide")
-st.title("🎬 Filmography Dataset")
+st.title("🎬 FILMOGRAPHY DATASET")
 st.write(
     """
    Welcome to our interactive visualization app featuring data from [The Movie Database (TMDB)](https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata). 
@@ -23,13 +23,13 @@ df = load_data()
 
 # Multiselect widget for genres
 genres = st.multiselect(
-    "Select Genres",
+    "SELECT GENRES",
     df.genre.unique(),
     ["Action", "Adventure", "Biography", "Comedy", "Drama", "Horror"],
 )
 
 # Slider widget for years
-years = st.slider("Select Years", 1980, 2016, (2000, 2016))
+years = st.slider("SELECT YEARS", 1980, 2016, (2000, 2016))
 
 # Filter the dataframe based on the widget input
 df_filtered = df[(df["genre"].isin(genres)) & (df["year"].between(years[0], years[1]))]
@@ -46,7 +46,7 @@ st.dataframe(
 )
 
 # Display summary statistics
-st.subheader("Summary Statistics")
+st.subheader("SUMMARY STATISTICS")
 st.write(df_filtered.describe())
 
 # Display the data as an Altair chart
@@ -67,7 +67,7 @@ line_chart = (
 st.altair_chart(line_chart, use_container_width=True)
 
 # Additional Visualization: Bar Chart
-st.subheader("Bar Chart: Total Gross Earnings by Genre")
+st.subheader("BAR CHART: TOTAL GROSS EARNINGS BY GENRE")
 bar_chart = (
     alt.Chart(df_chart)
     .mark_bar()
@@ -82,7 +82,7 @@ bar_chart = (
 st.altair_chart(bar_chart, use_container_width=True)
 
 # Additional Visualization: Bubble Chart
-st.subheader("Bubble Chart: Gross Earnings by Year and Genre")
+st.subheader("BUBBLE CHART: GROSS EARNINGS BY YEAR AND GENRE")
 bubble_chart = (
     alt.Chart(df_chart)
     .mark_circle(size=60)
