@@ -103,8 +103,9 @@ st.markdown("""
     <style>
     .main {
         background-color: #f0f2f6;
-        color: darkturquoise;
+        color: black; /* Change text color to black */
         font-family: 'Roboto', sans-serif;
+        text-align: center; /* Center align text */
     }
     .block-container {
         padding: 2rem;
@@ -112,7 +113,7 @@ st.markdown("""
     .stButton>button {
         background-color: #4CAF50;
         color: white;
-        font-size: 1rem;
+        font-size: 1.2rem; /* Increase button font size */
         padding: 0.5rem 1rem;
         border-radius: 0.25rem;
         border: none;
@@ -148,7 +149,9 @@ st.markdown("""
         border-radius: 0.25rem;
     }
     h1, h2, h3, h4, h5, h6, p, label, div, span {
-        color: darkturquoise !important;
+        color: black !important; /* Change text color to black */
+        font-size: 1.5rem !important; /* Increase font size for all text */
+        text-align: center; /* Center align text */
     }
     </style>
     """, unsafe_allow_html=True)
