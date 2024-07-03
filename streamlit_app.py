@@ -158,5 +158,9 @@ st.markdown("""
     label{
         text-align: center;       
     }
+    p{
+    font-size:16px
+    text-align: justify;          
+    }
     </style>
     """, unsafe_allow_html=True)
