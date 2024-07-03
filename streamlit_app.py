@@ -103,7 +103,7 @@ st.markdown("""
     <style>
     .main {
         background-color: #f0f2f6;
-        color: #333;
+        color: black;
         font-family: 'Roboto', sans-serif;
         background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
     }
