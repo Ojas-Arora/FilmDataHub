@@ -122,27 +122,32 @@ st.markdown("""
     }
     .stTextInput>div>div>input {
         font-size: 1rem;
+        text-align:center;
         padding: 0.5rem;
         border-radius: 0.25rem;
         border: 1px solid #ccc;
     }
     .stSelectbox>div>div>select {
         font-size: 1rem;
+        text-align:center;
         padding: 0.5rem;
         border-radius: 0.25rem;
         border: 1px solid #ccc;
     }
     .stSlider>div>div>div>div>div>div {
         font-size: 1rem;
+        text-align:center;
     }
     .stNumberInput>div>div>input {
         font-size: 1rem;
+        text-align:center;
         padding: 0.5rem;
         border-radius: 0.25rem;
         border: 1px solid #ccc;
     }
     .stAlert {
         font-size: 1.2rem;
+        text-align:center;
         padding: 1rem;
         border-radius: 0.25rem;
     }
