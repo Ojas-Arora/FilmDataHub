@@ -50,6 +50,11 @@ st.dataframe(
 st.subheader("SUMMARY STATISTICS")
 st.write(df_filtered.describe())
 
+# Center-align the Altair charts using custom CSS and HTML
+centered_style = """
+<div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+"""
+
 # Display the data as an Altair chart
 df_chart = pd.melt(
     df_reshaped.reset_index(), id_vars="year", var_name="genre", value_name="gross"
@@ -65,7 +70,10 @@ line_chart = (
     )
     .properties(height=320, title="Gross Earnings by Genre Over Years")
 )
+
+st.markdown(centered_style, unsafe_allow_html=True)
 st.altair_chart(line_chart, use_container_width=True)
+st.markdown("</div>", unsafe_allow_html=True)
 
 # Additional Visualization: Bar Chart
 st.subheader("BAR CHART: TOTAL GROSS EARNINGS BY GENRE")
@@ -80,7 +88,10 @@ bar_chart = (
     )
     .properties(height=320)
 )
+
+st.markdown(centered_style, unsafe_allow_html=True)
 st.altair_chart(bar_chart, use_container_width=True)
+st.markdown("</div>", unsafe_allow_html=True)
 
 # Additional Visualization: Bubble Chart
 st.subheader("BUBBLE CHART: GROSS EARNINGS BY YEAR AND GENRE")
@@ -96,7 +107,10 @@ bubble_chart = (
     )
     .properties(height=320)
 )
+
+st.markdown(centered_style, unsafe_allow_html=True)
 st.altair_chart(bubble_chart, use_container_width=True)
+st.markdown("</div>", unsafe_allow_html=True)
 
 # Custom CSS for better styling
 st.markdown("""
