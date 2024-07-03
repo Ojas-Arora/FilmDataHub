@@ -24,13 +24,13 @@ df = load_data()
 
 # Multiselect widget for genres
 genres = st.multiselect(
-    "🎬 SELECT GENRES",
+    "SELECT GENRES",
     df.genre.unique(),
     ["Action", "Adventure", "Biography", "Comedy", "Drama", "Horror"],
 )
 
 # Slider widget for years
-years = st.slider("📅 SELECT YEARS", 1980, 2016, (2000, 2016))
+years = st.slider("SELECT YEARS", 1980, 2016, (2000, 2016))
 
 # Filter the dataframe based on the widget input
 df_filtered = df[(df["genre"].isin(genres)) & (df["year"].between(years[0], years[1]))]
@@ -47,7 +47,7 @@ st.dataframe(
 )
 
 # Display summary statistics
-st.markdown("<h2 style='text-align: center;'>📊 SUMMARY STATISTICS</h2>", unsafe_allow_html=True)
+st.subheader("SUMMARY STATISTICS")
 st.write(df_filtered.describe())
 
 # Display the data as an Altair chart
@@ -68,7 +68,7 @@ line_chart = (
 st.altair_chart(line_chart, use_container_width=True)
 
 # Additional Visualization: Bar Chart
-st.markdown("<h2 style='text-align: center;'>📊 BAR CHART: TOTAL GROSS EARNINGS BY GENRE</h2>", unsafe_allow_html=True)
+st.subheader("BAR CHART: TOTAL GROSS EARNINGS BY GENRE")
 bar_chart = (
     alt.Chart(df_chart)
     .mark_bar()
@@ -83,7 +83,7 @@ bar_chart = (
 st.altair_chart(bar_chart, use_container_width=True)
 
 # Additional Visualization: Bubble Chart
-st.markdown("<h2 style='text-align: center;'>📊 BUBBLE CHART: GROSS EARNINGS BY YEAR AND GENRE</h2>", unsafe_allow_html=True)
+st.subheader("BUBBLE CHART: GROSS EARNINGS BY YEAR AND GENRE")
 bubble_chart = (
     alt.Chart(df_chart)
     .mark_circle(size=60)
@@ -120,7 +120,7 @@ st.markdown("""
         cursor: pointer;
     }
     .stButton>button:hover {
-        background-color: #17a2b8;
+        background-color: darkturquoise;
     }
     .stTextInput>div>div>input {
         font-size: 1rem;
@@ -128,7 +128,6 @@ st.markdown("""
         padding: 0.5rem;
         border-radius: 0.25rem;
         border: 1px solid #ccc;
-        color: black;
     }
     .stSelectbox>div>div>select {
         font-size: 1rem;
@@ -136,12 +135,10 @@ st.markdown("""
         padding: 0.5rem;
         border-radius: 0.25rem;
         border: 1px solid #ccc;
-        color: black;
     }
     .stSlider>div>div>div>div>div>div {
         font-size: 1rem;
         text-align:center;
-        color: black;
     }
     .stNumberInput>div>div>input {
         font-size: 1rem;
@@ -149,7 +146,6 @@ st.markdown("""
         padding: 0.5rem;
         border-radius: 0.25rem;
         border: 1px solid #ccc;
-        color: black;
     }
     .stAlert {
         font-size: 1.2rem;
