@@ -37,10 +37,10 @@ st.markdown("""
     <style>
     /* Change text color of selectbox and slider */
     div[role="listbox"] > div {
-        color: black !important;
+        color: black ;
     }
     div[data-baseweb="slider"] > div {
-        color: black !important;
+        color: black ;
     }
     </style>
     """, unsafe_allow_html=True)
