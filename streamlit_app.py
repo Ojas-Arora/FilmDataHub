@@ -199,5 +199,9 @@ st.markdown("""
         border: 0;
         right: 0;
     }
+     h1, h2, h3, h4, h5, h6, p, label, div, span {
+        color: black !important; /* Change text color to black */
+        font-size: 1.5rem !important; /* Increase font size for all text */
+        text-align: center; /* Center align text */
     </style>
     """, unsafe_allow_html=True)
