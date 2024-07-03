@@ -146,5 +146,9 @@ st.markdown("""
         padding: 1rem;
         border-radius: 0.25rem;
     }
+    h1, h2, h3, h4, h5, h6{
+        color: black;
+        text-align:center;       
+    }
     </style>
     """, unsafe_allow_html=True)
