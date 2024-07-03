@@ -32,19 +32,6 @@ genres = st.multiselect(
 # Slider widget for years
 years = st.slider("📅 SELECT YEARS", 1980, 2016, (2000, 2016))
 
-# Add CSS to change widget text color to black
-st.markdown("""
-    <style>
-    /* Change text color of selectbox and slider */
-    div[role="listbox"] > div {
-        color: black ;
-    }
-    div[data-baseweb="slider"] > div {
-        color: black ;
-    }
-    </style>
-    """, unsafe_allow_html=True)
-
 # Filter the dataframe based on the widget input
 df_filtered = df[(df["genre"].isin(genres)) & (df["year"].between(years[0], years[1]))]
 df_reshaped = df_filtered.pivot_table(
@@ -141,6 +128,7 @@ st.markdown("""
         padding: 0.5rem;
         border-radius: 0.25rem;
         border: 1px solid #ccc;
+        color: black;
     }
     .stSelectbox>div>div>select {
         font-size: 1rem;
@@ -148,12 +136,12 @@ st.markdown("""
         padding: 0.5rem;
         border-radius: 0.25rem;
         border: 1px solid #ccc;
-        color: black !important;  /* Change text color to black */
+        color: black;
     }
     .stSlider>div>div>div>div>div>div {
         font-size: 1rem;
         text-align:center;
-        color: black !important;  /* Change text color to black */
+        color: black;
     }
     .stNumberInput>div>div>input {
         font-size: 1rem;
@@ -161,6 +149,7 @@ st.markdown("""
         padding: 0.5rem;
         border-radius: 0.25rem;
         border: 1px solid #ccc;
+        color: black;
     }
     .stAlert {
         font-size: 1.2rem;
