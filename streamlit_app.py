@@ -24,13 +24,13 @@ df = load_data()
 
 # Multiselect widget for genres
 genres = st.multiselect(
-    "SELECT GENRES",
+    "🎬 SELECT GENRES",
     df.genre.unique(),
     ["Action", "Adventure", "Biography", "Comedy", "Drama", "Horror"],
 )
 
 # Slider widget for years
-years = st.slider("SELECT YEARS", 1980, 2016, (2000, 2016))
+years = st.slider("📅 SELECT YEARS", 1980, 2016, (2000, 2016))
 
 # Filter the dataframe based on the widget input
 df_filtered = df[(df["genre"].isin(genres)) & (df["year"].between(years[0], years[1]))]
@@ -47,13 +47,8 @@ st.dataframe(
 )
 
 # Display summary statistics
-st.subheader("SUMMARY STATISTICS")
+st.markdown("<h2 style='text-align: center;'>📊 SUMMARY STATISTICS</h2>", unsafe_allow_html=True)
 st.write(df_filtered.describe())
-
-# Center-align the Altair charts using custom CSS and HTML
-centered_style = """
-<div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
-"""
 
 # Display the data as an Altair chart
 df_chart = pd.melt(
@@ -70,13 +65,10 @@ line_chart = (
     )
     .properties(height=320, title="Gross Earnings by Genre Over Years")
 )
-
-st.markdown(centered_style, unsafe_allow_html=True)
 st.altair_chart(line_chart, use_container_width=True)
-st.markdown("</div>", unsafe_allow_html=True)
 
 # Additional Visualization: Bar Chart
-st.subheader("BAR CHART: TOTAL GROSS EARNINGS BY GENRE")
+st.markdown("<h2 style='text-align: center;'>📊 BAR CHART: TOTAL GROSS EARNINGS BY GENRE</h2>", unsafe_allow_html=True)
 bar_chart = (
     alt.Chart(df_chart)
     .mark_bar()
@@ -88,13 +80,10 @@ bar_chart = (
     )
     .properties(height=320)
 )
-
-st.markdown(centered_style, unsafe_allow_html=True)
 st.altair_chart(bar_chart, use_container_width=True)
-st.markdown("</div>", unsafe_allow_html=True)
 
 # Additional Visualization: Bubble Chart
-st.subheader("BUBBLE CHART: GROSS EARNINGS BY YEAR AND GENRE")
+st.markdown("<h2 style='text-align: center;'>📊 BUBBLE CHART: GROSS EARNINGS BY YEAR AND GENRE</h2>", unsafe_allow_html=True)
 bubble_chart = (
     alt.Chart(df_chart)
     .mark_circle(size=60)
@@ -107,10 +96,7 @@ bubble_chart = (
     )
     .properties(height=320)
 )
-
-st.markdown(centered_style, unsafe_allow_html=True)
 st.altair_chart(bubble_chart, use_container_width=True)
-st.markdown("</div>", unsafe_allow_html=True)
 
 # Custom CSS for better styling
 st.markdown("""
@@ -119,6 +105,7 @@ st.markdown("""
         background-color: #f0f2f6;
         color: #333;
         font-family: 'Roboto', sans-serif;
+        background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
     }
     .block-container {
         padding: 2rem;
@@ -133,7 +120,7 @@ st.markdown("""
         cursor: pointer;
     }
     .stButton>button:hover {
-        background-color: darkturquoise;
+        background-color: #17a2b8;
     }
     .stTextInput>div>div>input {
         font-size: 1rem;
