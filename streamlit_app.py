@@ -99,6 +99,7 @@ bubble_chart = (
 st.altair_chart(bubble_chart, use_container_width=True)
 
 # Custom CSS for better styling
+# Custom CSS for better styling
 st.markdown("""
     <style>
     .main {
@@ -111,8 +112,8 @@ st.markdown("""
         padding: 2rem;
     }
     .stButton>button {
-        background-color: #4CAF50;
-        color: white;
+        background-color: darkturquoise; /* Change button background color */
+        color: white; /* Change button text color to white */
         font-size: 1.2rem; /* Increase button font size */
         padding: 0.5rem 1rem;
         border-radius: 0.25rem;
@@ -148,10 +149,55 @@ st.markdown("""
         padding: 1rem;
         border-radius: 0.25rem;
     }
-    h1, h2, h3, h4, h5, h6, p, label, div, span {
-        color: black !important; /* Change text color to black */
-        font-size: 2 rem !important; /* Increase font size for all text */
-        text-align: center; /* Center align text */
+    .stDropdown {
+        color: white; /* Change text color of dropdown items to white */
+    }
+    .stAlert {
+        font-size: 1.2rem;
+        padding: 1rem;
+        border-radius: 0.25rem;
+    }
+    .stSelectbox>div>div>select {
+        font-size: 1rem;
+        padding: 0.5rem;
+        border-radius: 0.25rem;
+        border: 1px solid #ccc;
+    }
+    .stSlider>div>div>div>div>div>div {
+        font-size: 1rem;
+    }
+    .stNumberInput>div>div>input {
+        font-size: 1rem;
+        padding: 0.5rem;
+        border-radius: 0.25rem;
+        border: 1px solid #ccc;
+    }
+    .stAlert {
+        font-size: 1.2rem;
+        padding: 1rem;
+        border-radius: 0.25rem;
+    }
+    .github-corner:hover .octo-arm {
+        animation: octocat-wave 560ms ease-in-out;
+    }
+    @keyframes octocat-wave {
+        0%, 100% {
+            transform: rotate(0);
+        }
+        20%, 60% {
+            transform: rotate(-25deg);
+        }
+        40%, 80% {
+            transform: rotate(10deg);
+        }
+    }
+    .github-corner svg {
+        fill: #ffffff; /* Change GitHub icon color to white */
+        color: #ffffff; /* Change GitHub icon color to white */
+        position: absolute;
+        top: 0;
+        border: 0;
+        right: 0;
     }
     </style>
     """, unsafe_allow_html=True)
