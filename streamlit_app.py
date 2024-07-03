@@ -7,10 +7,9 @@ st.set_page_config(page_title="Movies Dataset", page_icon="🎬", layout="wide")
 st.title("🎬 Filmography Dataset")
 st.write(
     """
-    Welcome to our interactive visualization app featuring data from 
-    [The Movie Database (TMDB)](https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata). 
-    Dive into the world of cinema and discover which movie genres have dominated the box office over the years. 
-    Use the widgets below to start your exploration!
+   Welcome to our interactive visualization app featuring data from [The Movie Database (TMDB)](https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata). 
+   Dive into the world of cinema and discover which movie genres have dominated the box office over the years. 
+   Use the widgets below to start your exploration!
     """
 )
 
@@ -24,13 +23,13 @@ df = load_data()
 
 # Multiselect widget for genres
 genres = st.multiselect(
-    "🎬 Select Genres",
+    "Select Genres",
     df.genre.unique(),
     ["Action", "Adventure", "Biography", "Comedy", "Drama", "Horror"],
 )
 
 # Slider widget for years
-years = st.slider("📅 Select Years", 1986, 2006, (2000, 2016))
+years = st.slider("Select Years", 1980, 2020, (2000, 2016))
 
 # Filter the dataframe based on the widget input
 df_filtered = df[(df["genre"].isin(genres)) & (df["year"].between(years[0], years[1]))]
@@ -47,7 +46,7 @@ st.dataframe(
 )
 
 # Display summary statistics
-st.subheader("📊 Summary Statistics")
+st.subheader("Summary Statistics")
 st.write(df_filtered.describe())
 
 # Display the data as an Altair chart
@@ -68,7 +67,7 @@ line_chart = (
 st.altair_chart(line_chart, use_container_width=True)
 
 # Additional Visualization: Bar Chart
-st.subheader("📊 Bar Chart: Total Gross Earnings by Genre")
+st.subheader("Bar Chart: Total Gross Earnings by Genre")
 bar_chart = (
     alt.Chart(df_chart)
     .mark_bar()
@@ -83,7 +82,7 @@ bar_chart = (
 st.altair_chart(bar_chart, use_container_width=True)
 
 # Additional Visualization: Bubble Chart
-st.subheader("📊 Bubble Chart: Gross Earnings by Year and Genre")
+st.subheader("Bubble Chart: Gross Earnings by Year and Genre")
 bubble_chart = (
     alt.Chart(df_chart)
     .mark_circle(size=60)
@@ -103,7 +102,7 @@ st.markdown("""
     <style>
     .main {
         background-color: #f0f2f6;
-        color: darkturquoise;
+        color: #333;
         font-family: 'Roboto', sans-serif;
     }
     .block-container {
@@ -146,10 +145,6 @@ st.markdown("""
         font-size: 1.2rem;
         padding: 1rem;
         border-radius: 0.25rem;
-    }
-    h1, h2, h3, h4, h5, h6, p, label, span {
-        color: black ;
-        text-align: center;
     }
     </style>
     """, unsafe_allow_html=True)
