@@ -103,7 +103,7 @@ st.markdown("""
     <style>
     .main {
         background-color: #f0f2f6;
-        color: black;
+        color: #333;
         font-family: 'Roboto', sans-serif;
         background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
     }
@@ -128,7 +128,6 @@ st.markdown("""
         padding: 0.5rem;
         border-radius: 0.25rem;
         border: 1px solid #ccc;
-        color: black;
     }
     .stSelectbox>div>div>select {
         font-size: 1rem;
@@ -136,12 +135,12 @@ st.markdown("""
         padding: 0.5rem;
         border-radius: 0.25rem;
         border: 1px solid #ccc;
-        color: black;
+        color: black !important;  /* Change text color to black */
     }
     .stSlider>div>div>div>div>div>div {
         font-size: 1rem;
         text-align:center;
-        color: black;
+        color: black !important;  /* Change text color to black */
     }
     .stNumberInput>div>div>input {
         font-size: 1rem;
@@ -149,7 +148,6 @@ st.markdown("""
         padding: 0.5rem;
         border-radius: 0.25rem;
         border: 1px solid #ccc;
-        color: black;
     }
     .stAlert {
         font-size: 1.2rem;
