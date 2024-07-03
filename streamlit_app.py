@@ -159,7 +159,7 @@ st.markdown("""
         text-align: center;       
     }
     p{
-    font-size:16px;
+    font-size:20px;
     text-align: justify;          
     }
     </style>
