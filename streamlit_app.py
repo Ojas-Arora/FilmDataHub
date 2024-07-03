@@ -102,10 +102,10 @@ st.altair_chart(bubble_chart, use_container_width=True)
 st.markdown("""
     <style>
     .main {
-        background-color: #f0f2f6;
-        color: #333;
+        background-color: white;
+        color: black;
         font-family: 'Roboto', sans-serif;
-       
+        background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
     }
     .block-container {
         padding: 2rem;
