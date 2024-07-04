@@ -31,13 +31,13 @@ Select genres using the multiselect widget to filter data.
 Use the slider to choose specific years for analysis.
 Explore summary statistics, line charts, bar charts, and bubble charts showcasing movie genre insights.
 
-Screenshots
+IV. Screenshots
 
 
 
-Contributing
+V. Contributing
 Contributions are welcome! Please fork the repository and submit pull requests to contribute to FilmDataHub.
 
-License
+VI. License
 
 This project is registered under the MIT License
