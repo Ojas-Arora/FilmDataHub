@@ -101,6 +101,9 @@ st.altair_chart(bubble_chart, use_container_width=True)
 # Custom CSS for better styling
 st.markdown("""
     <style>
+    div[data-baseweb="select"] {
+    color: black;
+}
     .main {
         background-color: white;
         color: black;
