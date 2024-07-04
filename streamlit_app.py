@@ -15,7 +15,7 @@ st.write(
 )
 
 # Load the data from a CSV
-@st.cache_data
+@st.cache
 def load_data():
     df = pd.read_csv("data/movies_genres_summary.csv")
     return df
@@ -101,9 +101,6 @@ st.altair_chart(bubble_chart, use_container_width=True)
 # Custom CSS for better styling
 st.markdown("""
     <style>
-    div[data-baseweb="select"] {
-    color: black;
-}
     .main {
         background-color: white;
         color: black;
@@ -166,6 +163,10 @@ st.markdown("""
     p{
     font-size:20px;
     text-align: justify;          
+    }
+    .stMultiSelect > div:nth-child(1) > label {
+        color: black !important;
+        text-align: center;
     }
     </style>
     """, unsafe_allow_html=True)
