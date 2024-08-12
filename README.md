@@ -1,5 +1,6 @@
-                                                             🎬 FilmDataHub
+                                                  🎬 FilmDataHub
 Welcome to FilmDataHub! This project provides an interactive visualization app featuring data from [The Movie Database (TMDB)](https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata). [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://appapppy-rvbjjsaxxkdycfsw5axoe6.streamlit.app/). Explore the world of cinema and discover insights into movie genres and box office performance over the years.
+![image](https://github.com/user-attachments/assets/766e8ea2-1c61-42de-9d36-8938e473ef0b)
 
 I. Features
 
